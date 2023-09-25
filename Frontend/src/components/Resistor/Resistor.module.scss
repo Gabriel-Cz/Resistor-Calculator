@@ -1,0 +1,86 @@
+@use '../../styles/media.mixin' as m;
+@import '../../styles/_variables.scss';
+
+.resistor {
+  animation: $animationFast;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  @include m.media(xs) {
+    font-size: small;
+  }
+
+  .bandWrapper {
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    left: 0;
+    top: 35%;
+
+    @include m.media(xs) {
+      top: 45%;
+
+      h1 {
+        padding-top: 20px;
+      }
+    }
+  }
+
+  .totalValuesWrapper {
+    animation: $animationFast;
+    width: 100%;
+    position: absolute;
+    display: grid;
+    margin: 0 auto;
+    gap: 10px;
+    bottom: 20%;
+    left: 0;
+    text-align: center;
+    justify-content: center;
+
+    @include m.media(xs) {
+      bottom: 15%;
+    } 
+
+    h2 {
+      animation: $animationFast;
+      width: 100%;
+      margin: 0 auto;
+      text-align: left;
+    }
+  }
+
+  h3 {
+    margin-top: 70px;
+    animation: $animationFast;
+    width: 100%;
+    text-align: center;
+  }
+
+  h4 {
+    margin-top: 25px;
+    font-weight: 500;
+    animation: $animationFast;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  svg {
+    animation: $animationFast;
+    height: 80%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%,-50%);
+
+    @include m.media(xs) {
+      transform: translate(-50%,-40%)
+    }
+  }
+}

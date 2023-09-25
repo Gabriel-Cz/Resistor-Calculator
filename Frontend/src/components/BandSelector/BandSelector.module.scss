@@ -1,0 +1,115 @@
+@use '../../styles/media.mixin.scss' as m;
+@import '../../styles/_variables.scss';
+
+.bandSelector {
+  max-width: 65px;
+  animation: $animation;
+  font-size: small;
+  color: whitesmoke;
+  border-radius: 20px;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  text-align: center;
+  z-index: 99;
+
+  @include m.media(xs) {
+    font-size: xx-small;
+  }
+
+  &[data-variant=multiplier] {
+    padding-right: 140px;
+    max-width: 100px;
+
+    @include m.media(xs) {
+      padding-right: 30px;
+    }
+  }
+
+  .select {
+    &:hover {
+      cursor: pointer;
+    }
+
+    button {
+      background: none;
+      border: none;
+      font: inherit;
+      cursor: pointer;
+      outline: inherit;
+      padding: 0;
+      margin: 0;
+
+      h1 {
+        text-align: center;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+        position: relative;
+
+        @include m.media(xs) {
+          font-size: large;
+        }
+
+        &[data-active=true] {
+          transition: 0.2s ease-in-out all;
+          text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+          transform: scale(1.2);
+        }
+
+        &[data-value^="10000"] {
+          scale: 0.5;
+          margin-right: 80%;
+
+          @include m.media(xs) {
+            text-align: center;
+            margin-left: -40px;
+            padding-right: 0px;
+            margin-right: 0;
+          }
+        }
+
+      }
+    }
+
+    .options {
+      width: 100%;
+      z-index: 99;
+      animation: $animationFast;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: absolute;
+      left: 50%;
+      top: -70%;
+      transform: translate(-50%, -50%);
+
+      option {
+        z-index: 999;
+        margin: 10px;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-weight: 700;
+        // opacity: 75%;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        @include m.media(xs) {
+          padding: 7.5px 15px;
+        }
+
+        &[data-active=true] {
+          transition: 0.5s ease-in-out all;
+          box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+          transform: scale(1.2);
+        }
+
+        &[data-color=White],
+        &[data-color=Yellow] {
+          color: grey;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import './styles/fonts';
+
+#root {
+  display: grid;
+  place-items: center;
+  font-family: $orbitron;
+  letter-spacing: 1px;
+  height: 100vh;
+  background-color: rgba(128, 128, 128, 0.25);
+}
