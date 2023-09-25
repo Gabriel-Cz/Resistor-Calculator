@@ -1,7 +1,11 @@
 
 # React/TS/Vite + Node.js/TS/Express/MongoDB
 
-// Clone this repo
+Hi!,
+I am Gabriel,
+And this is the repo for my Resistor Calculator Project. You can follow the next instructions to run the Backend and the Frontend.
+
+// First off, Clone this repo
 // After you successfully cloned the repo.
 
 // Open 2 terminals
