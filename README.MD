@@ -5,10 +5,10 @@ Hi!,
 I am Gabriel,
 And this is the repo for my Resistor Calculator Project. You can follow the next instructions to run the Backend and the Frontend.
 
-// First off, Clone this repo
-// After you successfully cloned the repo.
+// First off, Clone this repo.
 
-// Open 2 terminals
+// After you successfully cloned the repo.
+// Open 2 terminals.
 * Both projects run in Node 16.16.0v or further, so make sure that you have the proper version.
 
 In the first terminal go to the Backend Project folder: cd Backend
